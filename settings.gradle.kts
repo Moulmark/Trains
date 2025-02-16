@@ -1,2 +1,2 @@
-rootProject.name = "mlib"
+rootProject.name = "jukebox"
 
