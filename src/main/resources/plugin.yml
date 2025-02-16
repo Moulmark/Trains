@@ -1,0 +1,5 @@
+name: Elevators
+main: com.moulmark.elevators.Elevators
+version: ${version}
+author: Moulmark
+api-version: 1.21.4
