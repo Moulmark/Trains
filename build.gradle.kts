@@ -33,7 +33,7 @@ tasks.build {
 
 tasks.withType<ShadowJar> {
     archiveClassifier.set("")
-    relocate("com.jeff_media.customblockdata", "com.moulmark.elevators.blockdata")
+    relocate("com.jeff_media.customblockdata", "com.moulmark.elevators")
 }
 
 tasks.processResources {

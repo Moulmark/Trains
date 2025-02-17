@@ -1,0 +1,5 @@
+# Elevators Configuration File (v0.0.1)
+
+elevators:
+  material: 'WHITE_TERRACOTTA' # Must be a block material type!
+  display-name: '&eElevator' # You can use legacy formating!
