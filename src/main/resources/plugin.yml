@@ -1,5 +1,5 @@
-name: Elevators
-main: com.moulmark.elevators.Elevators
+name: Trains
+main: com.moulmark.trains.Trains
 version: ${version}
 author: Moulmark
 api-version: 1.21.4
