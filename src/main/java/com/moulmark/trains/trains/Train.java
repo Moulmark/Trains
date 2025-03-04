@@ -7,14 +7,23 @@ import org.bukkit.entity.Entity;
 import org.bukkit.entity.Minecart;
 import org.bukkit.util.Vector;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
 @Setter
 public final class Train {
+    private final List<Minecart> wagons;
+    private Station station;
     private int size;
-    private List<Minecart> wagons;
     private boolean stopped;
+
+    public Train(int size, Station station) {
+        this.size = size;
+        this.station = station;
+        this.wagons = new ArrayList<>();
+        this.stopped = true;
+    }
 
     public void spawn(Location location) {
         for (int i = 0; i <= size; i++) {
@@ -22,6 +31,15 @@ public final class Train {
             minecart.setInvulnerable(true);
             minecart.setSlowWhenEmpty(false);
             wagons.add(minecart);
+        }
+    }
+
+    public void mount() {
+        for (Entity entity : station.getPassengers()) {
+            for (Minecart minecart : wagons) {
+                if (!minecart.getPassengers().isEmpty()) continue;
+                minecart.addPassenger(entity);
+            }
         }
     }
 
